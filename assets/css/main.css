@@ -116,30 +116,6 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-/* Type */
-/* Fix avatar scaling in header */
-#header .logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#header .logo .image.avatar {
-  display: inline-block;
-  width: auto;
-  margin: 0;
-}
-
-#header .logo .image.avatar img {
-  width: 110px;        /* adjust size here */
-  height: 110px;
-  max-width: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  border: 2px solid rgba(255,255,255,0.8);
-}
-
 	html {
 		font-size: 16pt;
 	}
@@ -1688,5 +1664,6 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
 
 
