@@ -29,18 +29,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
-.image.portrait {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-.image.portrait img {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.3);
+body {
+  background-image: url("images/pic02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body {
@@ -1673,3 +1666,4 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
