@@ -3784,17 +3784,40 @@ input, select, textarea {
 			}
 
 		}
+/* Full-screen hero with background image */
+#header.alt {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background image */
 #header.alt::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: -1;
+  background-image: url("../../images/pic02.jpg"); /* <-- change to your galaxy image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
-#header.alt {
-  position: relative;
+/* Dark overlay for readability */
+#header.alt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
   z-index: 1;
 }
 
-
+/* Put header content above background + overlay */
+#header.alt > * {
+  position: relative;
+  z-index: 2;
+}
