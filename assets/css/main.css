@@ -3784,15 +3784,17 @@ input, select, textarea {
 			}
 
 		}
-header.alt {
-  background-image: url("images/pic02.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;              /* fills the screen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+#header.alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
 }
+
+#header.alt {
+  position: relative;
+  z-index: 1;
+}
+
 
