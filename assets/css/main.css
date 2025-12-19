@@ -3784,7 +3784,7 @@ input, select, textarea {
 			}
 
 		}
-#header.alt {
+header.alt {
   background-image: url("images/pic02.png");
   background-size: cover;
   background-position: center;
