@@ -3821,3 +3821,8 @@ input, select, textarea {
   position: relative;
   z-index: 2;
 }
+/* Remove extra top spacing when header is removed */
+body.is-preload #main {
+  padding-top: 0;
+}
+
