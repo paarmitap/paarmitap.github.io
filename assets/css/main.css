@@ -3826,3 +3826,39 @@ body.is-preload #main {
   padding-top: 0;
 }
 
+/* Full-page galaxy background */
+body {
+  background-image: url("../images/galaxy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* A subtle dark overlay to improve readability */
+body:before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* Make your main content readable on top of the background */
+#main > section,
+#main > article,
+.main,
+article,
+section {
+  background: rgba(255, 255, 255, 0.90);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+}
+
+/* Optional: slightly nicer text contrast */
+#main, #main p, #main li {
+  color: #222;
+}
+
