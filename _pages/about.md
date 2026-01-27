@@ -13,4 +13,4 @@ I also work with Prof. Chris Kochanek and the ASAS-SN team on analyzing the new 
 
 **Contact:** pandey.176@osu.edu
 
-[Headshot](/images/headshot.jpg){: .align-right width="220px" }
+
