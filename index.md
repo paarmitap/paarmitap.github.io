@@ -11,3 +11,5 @@ I work with Prof. Laura Lopez and Prof. Todd Thompson on understanding **cosmic-
 I also work with Prof. Chris Kochanek and the ASAS-SN team on analyzing the new class of transients known as **Ambiguous Nuclear Transients (ANTs)**.
 
 **Contact:** pandey.176@osu.edu
+
+![Talk](/images/bio_00.png)
