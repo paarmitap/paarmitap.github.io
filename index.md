@@ -12,4 +12,4 @@ I also work with Prof. Chris Kochanek and the ASAS-SN team on analyzing the new 
 
 **Contact:** pandey.176@osu.edu
 
-![Talk](/images/bio_0.png)
+![Talk](/images/bio_00.jpg)
