@@ -3,7 +3,6 @@ title: "CV"
 permalink: /cv/
 ---
 
-## CV
 
 - [Download my CV](/files/PPandey_CV_Jan2026.pdf)
 
