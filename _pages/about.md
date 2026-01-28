@@ -7,11 +7,27 @@ I am originally from Uttar Pradesh, India, and my mother tongue is Hindi. I did 
 
 In my free time, I enjoy doing Yoga, biking, and playing with my pets. I have a cat named Lana Purr Ray who is the sweetest girl in the world. I also have a dog named Bobo, who loves sprinting and making new friends. Here are their pictures. Enjoy!
 
-![Lana1](/images/lana_00.jpg)
+<div class="feature__wrapper">
 
-![Bobo1](/images/bobo_00.JPG)
+<div class="feature__item">
+<img src="/images/lana_00.jpg" alt="Lana the cat">
+<p><strong>Lana Purr Ray</strong></p>
+</div>
 
-![Lana2](/images/lana_11.jpg)
+<div class="feature__item">
+<img src="/images/bobo_00.JPG" alt="Bobo the dog">
+<p><strong>Bobo</strong></p>
+</div>
 
-![Bobo2](/images/bobo_11.jpg)
+<div class="feature__item">
+<img src="/images/lana_11.jpg" alt="Lana the cat">
+<p><strong>Lana Purr Ray</strong></p>
+</div>
+
+<div class="feature__item">
+<img src="/images/bobo_11.jpg" alt="Bobo the dog">
+<p><strong>Bobo</strong></p>
+</div>
+
+</div>
 
