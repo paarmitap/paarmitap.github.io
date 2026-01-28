@@ -20,7 +20,7 @@ We also identify a new class of Fermi gamma-ray sources associated with explosiv
 
 Overall, our results show that star-forming regions younger than ~3 Myr are efficient cosmic-ray accelerators, with important implications for galaxy simulations and for understanding the origin of galactic cosmic rays.
 
-![EDO](/images/project1_plot.jpg)
+![EDO](/images/project1_plot.jpg){: width="45%" .align-center }
 
 - Read the RCW 38 paper here: [ADS](https://ui.adsabs.harvard.edu/abs/2024ApJ...976...98P/abstract)
 - Read the Explosive dispersal outflows paper here: [ADS](https://ui.adsabs.harvard.edu/abs/2025arXiv250902679P/abstract)
@@ -31,10 +31,10 @@ Overall, our results show that star-forming regions younger than ~3 Myr are effi
 
 **Keywords:** Active Galactic Nuclei, Tidal Disruption Events
 
-I study transient events associated with supermassive black holes, which offer unique insights into accretion physics in galactic nuclei. In a recent multiwavelength study, I analyzed **AT2020adpi**, a luminous optical/UV nuclear transient at z = 0.26 that does not fit cleanly into existing categories such as tidal disruption events or standard AGN variability.
+I study transient events associated with supermassive black holes, which offer unique insights into accretion physics in galactic nuclei. In a recent multiwavelength study, I analyzed **AT2020adpi**, a luminous optical/UV nuclear transient at z = 0.26 that does not fit into existing categories such as tidal disruption events or standard AGN variability.
 
 Its unusual light curve, strong mid-infrared flare, and evolving emission-line features suggest an accretion episode driven by either a stellar disruption within an active disk or instabilities in an active nucleus. This event highlights both the diversity of nuclear transients and the importance of coordinated, multiwavelength observations.
 
-![ANT](/images/project2_plot.jpg)
+![ANT](/images/project2_plot.jpg){: width="45%" .align-center }
 
 - Read the Paper here: [ADS](https://ui.adsabs.harvard.edu/abs/2025OJAp....851453P/abstract)
