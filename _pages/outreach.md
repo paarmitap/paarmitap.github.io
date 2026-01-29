@@ -6,7 +6,7 @@ permalink: /outreach/
 I come from a small town in India where access to education for women is limited. Without early mentors, I found guidance only in college. It was an experience that shaped my journey and inspired my commitment to mentorship.
 
 <figure class="paper-fig">
-  <img src="/images//images/mentor0.jpg"">
+  <img src="/images/mentor0.jpg"">
   <figcaption>
     Total Solar Eclipse outreach event at OSU Marion Campus.
   </figcaption>
@@ -16,7 +16,12 @@ I am part of the leadership team of the [Supernova Foundation](https://supernova
 
 I also mentor students through the [Polaris Mentorship Program](https://u.osu.edu/polaris/), supporting and broadening the participation of undergraduate students in Physics and Astronomy through academic and professional guidance.
 
-![Indian Women In Astro-Particle Physics](/images/mentor1.jpg){: width="45%" .align-center }
-*Indian Women In Astro-Particle Physics, TeVPA Conference, UChicago, 2024 *
+<figure class="paper-fig">
+  <img src="/images/mentor1.jpg"">
+  <figcaption>
+   Indian Women In Astro-Particle Physics, TeVPA Conference, UChicago, 2024.
+  </figcaption>
+</figure>
+
 
 Through these roles, I aim to support various scientific communities by ensuring that aspiring astrophysicists receive the mentorship and support I once lacked.
