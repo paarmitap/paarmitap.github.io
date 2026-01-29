@@ -5,8 +5,12 @@ permalink: /outreach/
 
 I come from a small town in India where access to education for women is limited. Without early mentors, I found guidance only in college. It was an experience that shaped my journey and inspired my commitment to mentorship.
 
-![Solar Eclipse Outreach Event at OSU](/images/mentor0.jpg){: width="45%" .align-center }
-*Total Solar Eclipse outreach event at OSU Marion Campus*
+<figure class="paper-fig">
+  <img src="/images//images/mentor0.jpg"">
+  <figcaption>
+    Total Solar Eclipse outreach event at OSU Marion Campus.
+  </figcaption>
+</figure>
 
 I am part of the leadership team of the [Supernova Foundation](https://supernovafoundation.org/), serving as the **Outreach and Mentoring Coordinator**. The Supernova Foundation is a global mentoring program dedicated to empowering young women and gender minorities pursuing careers in Physics. As of October 2025, it supports 400+ members across 50+ countries.
 
