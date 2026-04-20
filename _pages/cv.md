@@ -8,7 +8,7 @@ permalink: /cv/
 
 
 <iframe
-  src="/files/CV_Feb21.pdf"
+  src="/files/PPandey_CV_April2026.pdf"
   width="100%"
   height="900px"
   style="border: 1px solid #ddd; border-radius: 12px;"
