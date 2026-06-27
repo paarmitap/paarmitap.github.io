@@ -1,0 +1,34 @@
+/* White background, clean body */
+body {
+  background-color: #ffffff;
+  color: #2c2c2c;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Sidebar: minimal, no colored bg */
+#sidebar {
+  background: #f8f8f8;
+  border-right: 1px solid #e8e8e8;
+}
+
+/* Remove colored link underlines */
+a { color: #333; text-decoration: none; }
+a:hover { text-decoration: underline; color: #555; }
+
+/* Clean nav links in sidebar */
+.author__urls a {
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* Main content padding */
+.page__content {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Remove bordered/shadowed page wrapper */
+.page {
+  box-shadow: none;
+  border: none;
+}
