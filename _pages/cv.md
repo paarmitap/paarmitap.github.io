@@ -4,11 +4,11 @@ permalink: /cv/
 ---
 
 
-- [Download my CV](/files/CV_JULY26.pdf)
+- [Download my CV](/files/CV_PhD_JULY26.pdf)
 
 
 <iframe
-  src="/files/CV_JULY26.pdf"
+  src="/files/CV_PhD_JULY26.pdf"
   width="100%"
   height="900px"
   style="border: 1px solid #ddd; border-radius: 12px;"
