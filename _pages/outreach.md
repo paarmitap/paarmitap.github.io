@@ -1,5 +1,5 @@
 ---
-title: "Mentoring & Outreach"
+title: " "
 permalink: /outreach/
 ---
 
