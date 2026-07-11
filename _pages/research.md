@@ -1,5 +1,5 @@
 ---
-title: "Research"
+title: " "
 permalink: /research/
 layout: single
 author_profile: true
@@ -32,7 +32,7 @@ author_profile: true
   <div class="research-card" onclick="openModal('ant')">
     <img src="/images/project2_plot.jpg" alt="AT2020adpi comparison plot">
     <div class="research-card-label">
-      <h3>Unraveling the Nature of the Nuclear Transient AT2020adpi</h3>
+      <h3>Ambiguous Nuclear Transients</h3>
       <span class="read-more">Read more</span>
     </div>
   </div>
@@ -61,8 +61,8 @@ author_profile: true
       acceleration in two such environments.
     </p>
     <p>
-      First, we look at the young star-forming region <strong>RCW 38</strong> (age &lt; 0.5 Myr),
-      where we detect gamma-ray emission at a <strong>22&sigma;</strong> significance level,
+      First, we look at the young star-forming region RCW 38 (age &lt; 0.5 Myr),
+      where we detect gamma-ray emission at a 22&sigma; significance level,
       providing strong evidence that stellar winds can accelerate cosmic-ray particles.
       These observations allow us to constrain the cosmic-ray acceleration efficiency,
       diffusion timescales, and pressure within the region.
@@ -77,8 +77,8 @@ author_profile: true
     </figure>
     <p>
       We also identify a new class of Fermi gamma-ray sources associated with explosive
-      outflows, focusing on <strong>DR21</strong> in the Cygnus-X star-forming complex,
-      detected at <strong>35&sigma;</strong> significance. For this system, we quantify
+      dispersal outflows, focusing on DR21 in the Cygnus-X star-forming complex,
+      detected at 35&sigma; significance. For this system, we quantify
       the acceleration efficiency of explosive outflows and evaluate their contribution
       to the overall galactic cosmic-ray budget.
     </p>
@@ -109,7 +109,7 @@ author_profile: true
     <p>
       I study transient events associated with supermassive black holes, which offer
       unique insights into accretion physics in galactic nuclei. In a recent multiwavelength
-      study, I analyzed <strong>AT2020adpi</strong>, a luminous optical/UV nuclear transient
+      study, I analyzed AT2020adpi, a luminous optical/UV nuclear transient
       at z&nbsp;=&nbsp;0.26 that does not fit into existing categories such as tidal disruption
       events or standard AGN variability.
     </p>
