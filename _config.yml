@@ -33,7 +33,7 @@ author:
   orcid            : "https://orcid.org/0009-0003-6803-2420"
   
 
-googlescholar    : "https://scholar.google.com/citations?user=SlqBJJwAAAAJ&hl=en"
+  googlescholar    : "https://scholar.google.com/citations?user=SlqBJJwAAAAJ&hl=en"
   # Repositories and software development
   
   github           : "paarmitap"
