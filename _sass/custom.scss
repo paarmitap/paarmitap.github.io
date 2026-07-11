@@ -30,5 +30,38 @@ a:hover { text-decoration: underline; color: #555; }
 /* Remove bordered/shadowed page wrapper */
 .page {
   box-shadow: none;
+
+
+  /* Make the main content area use more of the screen */
+.page {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-right: 0 !important;
+}
+
+.page__inner-wrap {
+  max-width: 100% !important;
+}
+
+/* Widen the overall site container */
+#main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.initial-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+  /* Constrain images on the about page */
+.page__content figure img {
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
   border: none;
 }
