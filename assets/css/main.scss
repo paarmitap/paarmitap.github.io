@@ -1,10 +1,29 @@
 ---
 ---
 
-/*
- * This file controls what is imported from /_sass
+/* This file controls what is imported from /_sass
  *
  * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
-  @import "custom";
+
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "base";
+@import "forms";
+@import "tables";
+@import "animations";
+@import "utilities";
+@import "navs";
+@import "alerts";
+@import "masthead";
+@import "page";
+@import "sidebar";
+@import "buttons";
+@import "notices";
+@import "footer";
+@import "syntax";
+@import "breakpoints";
+@import "print";
+@import "custom";
