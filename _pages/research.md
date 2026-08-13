@@ -9,9 +9,8 @@ author_profile: true
 <div class="research-hero">
   <div class="research-hero-text">
     <p>
-      I am a multiwavelength observational astronomer working on two main threads:
-      cosmic-ray acceleration and transport in star-forming environments using
-      <em>Fermi</em>-LAT gamma-ray data, and the nature of exotic nuclear transients. Click a topic below to read more.
+      I am a multiwavelength observational astronomer working on two main threads: cosmic-ray acceleration and transport in star-forming environments using
+      Fermi-LAT gamma-ray data, and the nature of exotic nuclear transients. Click a topic below to read more.
     </p>
   </div>
 </div>
@@ -29,15 +28,23 @@ author_profile: true
     </div>
   </div>
 
-  <div class="research-card" onclick="openModal('ant')">
-    <img src="/images/project2_plot.jpg" alt="AT2020adpi comparison plot">
+  <div class="research-card" onclick="openModal('cr')">
+    <img src="/images/ORION.jpg" alt="Orion BN/KL JWST">
     <div class="research-card-label">
-      <h3>Ambiguous Nuclear Transients</h3>
+      <h3>Cosmic-Ray Acceleration in Explosive Dispersal Outflows</h3>
       <span class="read-more">Read more</span>
     </div>
   </div>
 
-</div>
+  <div class="research-card" onclick="openModal('ant')">
+    <img src="/images/ANT.jpg" alt="Galaxies">
+    <div class="research-card-label">
+      <h3> Ambiguous Nuclear Transients </h3>
+      <span class="read-more">Read more</span>
+    </div>
+  </div>
+
+
 
 <!-- ============================================================
      MODALS
@@ -57,11 +64,7 @@ author_profile: true
       suggest that young, massive star-forming regions may also contribute significantly.
     </p>
     <p>
-      In this work, we use Fermi-LAT gamma-ray observations to investigate cosmic-ray
-      acceleration in two such environments.
-    </p>
-    <p>
-      First, we look at the young star-forming region RCW 38 (age &lt; 0.5 Myr),
+      We look at the young star-forming region RCW 38 (age &lt; 0.5 Myr),
       where we detect gamma-ray emission at a 22&sigma; significance level,
       providing strong evidence that stellar winds can accelerate cosmic-ray particles.
       These observations allow us to constrain the cosmic-ray acceleration efficiency,
@@ -70,23 +73,28 @@ author_profile: true
     <figure class="paper-fig" style="max-width: 55%; margin: 1.5rem auto;">
       <img src="/images/Figureplot_00.png" style="width:100%;">
       <figcaption>
-        Multiwavelength image of RCW 38, with IR Spitzer image in red,
-        the Chandra X-ray broad-band data in green, and the background subtracted
+        Multiwavelength image of RCW 38, with the IR Spitzer image in red,
+        the Chandra X-ray broad-band data in green, and the background-subtracted
         &gt;2 GeV Fermi-LAT counts map in blue.
       </figcaption>
     </figure>
     <p>
-      We also identify a new class of Fermi gamma-ray sources associated with explosive
-      dispersal outflows, focusing on DR21 in the Cygnus-X star-forming complex,
-      detected at 35&sigma; significance. For this system, we quantify
-      the acceleration efficiency of explosive outflows and evaluate their contribution
-      to the overall galactic cosmic-ray budget.
-    </p>
-    <p>
-      Overall, our results show that star-forming regions younger than ~3 Myr are efficient
-      cosmic-ray accelerators, with important implications for galaxy simulations and for
-      understanding the origin of galactic cosmic rays.
-    </p>
+    In our analysis, we found that the cosmic ray acceleration efficiency and the diffusion coefficient are degenerate parameters, which means they cannot be constrained independently. So, we have to assume a value for one to constrain the other. Therefore, if we assume a diffusion coefficient value typically seen in the ISM (10²⁸ cm²/s ),  we get an efficiency of about 40%. Alternatively, if we assume an efficiency equal to the canonical SNR value of 10%, we get a diffusion coefficient of 2.5 × 10²⁷ cm²/s – an order of magnitude lower than the ISM value, which implies that CR are trapped in the region for a longer period. Both scenarios are physically interesting: either the cluster is extremely efficient at accelerating CRs, or CRs are being trapped inside the cluster and are confined for longer than in the general ISM. Overall, our results show that star-forming regions younger than 3 Myr are efficient cosmic-ray accelerators, with important implications for galaxy simulations and for understanding the origin of galactic cosmic rays.
+</p>
+    <ul>
+      <li>Read the RCW 38 paper: <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...976...98P/abstract" target="_blank">ADS</a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal-cr" class="research-modal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeModal('cr')">&times;</span>
+    <h2>Cosmic-Ray Acceleration in Explosive Dispersal Outlfows</h2>
+    <p><strong>Keywords:</strong> Explosive Molecular Outflows, Protostellar Mergers</p>
+     <p>
+      In this work, we identify a new class of Fermi gamma-ray sources associated with explosive dispersal outflows. These explosive events result from the dynamical disruption of a young, massive stellar system, like the merger of massive protostars – releasing at least 10^46 erg of energy into their environments. They consist of straight, narrow CO filaments which are isotropic and all point back to a common origin. They have been discovered using the ALMA and JWST telescopes.  Their occurrence rate is once every 100 years across the Milky Way – just like supernovae. We focus on DR21 EDO in the Cygnus-X star-forming complex, detected at 35&sigma; significance. Across the EDO sample, no more than 18% of outflow kinetic energy goes into CR acceleration. And when we account for the event rate across the Galaxy, EDOs contribute at least 1% of the Galactic CR budget that has traditionally been attributed to supernovae. That's a lower limit because there are possibly more EDOs in the galaxy.
+ </p>
     <figure class="paper-fig" style="max-width: 70%; margin: 1.5rem auto;">
       <img src="/images/project1_plot.jpg" style="width:100%;">
       <figcaption>
@@ -94,40 +102,46 @@ author_profile: true
       </figcaption>
     </figure>
     <ul>
-      <li>Read the RCW 38 paper: <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...976...98P/abstract" target="_blank">ADS</a></li>
       <li>Read the Explosive Dispersal Outflows paper: <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv250902679P/abstract" target="_blank">ADS</a></li>
     </ul>
   </div>
 </div>
 
+
 <!-- Modal 2: AT2020adpi -->
 <div id="modal-ant" class="research-modal">
   <div class="modal-content">
     <span class="modal-close" onclick="closeModal('ant')">&times;</span>
-    <h2>Unraveling the Nature of the Nuclear Transient AT2020adpi</h2>
+    <h2>Ambiguous Nuclear Transients</h2>
     <p><strong>Keywords:</strong> Active Galactic Nuclei, Tidal Disruption Events</p>
     <p>
       I study transient events associated with supermassive black holes, which offer
-      unique insights into accretion physics in galactic nuclei. In a recent multiwavelength
-      study, I analyzed AT2020adpi, a luminous optical/UV nuclear transient
-      at z&nbsp;=&nbsp;0.26 that does not fit into existing categories such as tidal disruption
-      events or standard AGN variability.
+      unique insights into accretion physics in galactic nuclei. In recent multiwavelength
+      studies, I analyzed AT2020adpi and AT2021yky, which are luminous optical/UV nuclear transients
+      that do not fit into existing categories such as tidal disruption events or standard AGN variability.
     </p>
     <p>
-      Its unusual light curve, strong mid-infrared flare, and evolving emission-line features
-      suggest an accretion episode driven by either a stellar disruption within an active disk
-      or instabilities in an active nucleus. This event highlights both the diversity of nuclear
-      transients and the importance of coordinated, multiwavelength observations.
+      AT2020adpi has an unusual TDE-like light-curve evolution and a strong mid-infrared flare. The optical spectra show broad Balmer and Mg II lines, indicative of an AGN association. However, the evolution of broad lines in the optical specta are similar to what has been observed in TDEs. This combination of observed features suggests an accretion episode driven by either a stellar disruption within an active disk or instabilities in an active nucleus. 
     </p>
     <figure class="paper-fig" style="max-width: 55%; margin: 1.5rem auto;">
       <img src="/images/project2_plot.jpg" style="width:100%;">
       <figcaption>
         Comparison of AT2020adpi with other known transients in the optical absolute
-        magnitude versus characteristic timescale parameter space.
+        magnitude versus characteristic timescale parameter space. This source occupies the parameter space associated with most energetic transients known.
+      </figcaption>
+    </figure>
+<p>
+  Another interesting source that I studied is AT2021yky. It is a fast blue optical transient that has characteristics similar to faint and fast TDEs. However, its optical spectra are unusual for TDEs since it has a largely featureless spectra with broad H_alpha lines that turn on post-peak. We compare this source with Luminous fast blue optical transients (LFBOTs) and faint and fast (FaF) TDEs. The cooler blackbody temperature of this transient and the absence of He II and Balmer emission lines other than H_alpha favour its classification as an ANT instead.
+</p>   
+    <figure class="paper-fig" style="max-width: 55%; margin: 1.5rem auto;">
+      <img src="/images/L40.pdf" style="width:100%;">
+      <figcaption>
+        Peak luminosity versus decline rate, which is the logarithmic change in bolometric luminosity between peak and 40 days post-peak, for AT2021yly along with a sample of TDEs, ANTs, and other luminous transients.
       </figcaption>
     </figure>
     <ul>
-      <li>Read the paper: <a href="https://ui.adsabs.harvard.edu/abs/2025OJAp....851453P/abstract" target="_blank">ADS</a></li>
+      <li>Read the paper AT2020adpi paper: <a href="https://ui.adsabs.harvard.edu/abs/2025OJAp....851453P/abstract" target="_blank">ADS</a></li>
+       <li>Read the paper AT2021yky paper: <a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260806462P/abstract" target="_blank">ADS</a></li>
     </ul>
   </div>
 </div>
