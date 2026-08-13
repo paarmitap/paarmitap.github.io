@@ -20,7 +20,7 @@ author_profile: true
      ============================================================ -->
 <div class="research-grid">
 
-  <div class="research-card" onclick="openModal('cr')">
+  <div class="research-card" onclick="openModal('cr1')">
     <img src="/images/Figureplot_00.png" alt="RCW 38 multiwavelength image">
     <div class="research-card-label">
       <h3>Cosmic-Ray Acceleration in Young Star-Forming Regions</h3>
@@ -28,7 +28,7 @@ author_profile: true
     </div>
   </div>
 
-  <div class="research-card" onclick="openModal('cr')">
+  <div class="research-card" onclick="openModal('cr2')">
     <img src="/images/ORION.jpg" alt="Orion BN/KL JWST">
     <div class="research-card-label">
       <h3>Cosmic-Ray Acceleration in Explosive Dispersal Outflows</h3>
@@ -51,9 +51,9 @@ author_profile: true
      ============================================================ -->
 
 <!-- Modal 1: Cosmic Rays -->
-<div id="modal-cr" class="research-modal">
+<div id="modal-cr1" class="research-modal">
   <div class="modal-content">
-    <span class="modal-close" onclick="closeModal('cr')">&times;</span>
+    <span class="modal-close" onclick="closeModal('cr1')">&times;</span>
     <h2>Cosmic-Ray Acceleration in Young Star-Forming Regions</h2>
     <p><strong>Keywords:</strong> Fermi-LAT, Stellar Winds, Diffusion Coefficient</p>
     <p>
@@ -87,9 +87,9 @@ author_profile: true
   </div>
 </div>
 
-<div id="modal-cr" class="research-modal">
+<div id="modal-cr2" class="research-modal">
   <div class="modal-content">
-    <span class="modal-close" onclick="closeModal('cr')">&times;</span>
+    <span class="modal-close" onclick="closeModal('cr2')">&times;</span>
     <h2>Cosmic-Ray Acceleration in Explosive Dispersal Outlfows</h2>
     <p><strong>Keywords:</strong> Explosive Molecular Outflows, Protostellar Mergers</p>
      <p>
