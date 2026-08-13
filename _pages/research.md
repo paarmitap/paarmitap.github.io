@@ -20,7 +20,7 @@ author_profile: true
      ============================================================ -->
 <div class="research-grid">
 
-  <div class="research-card" onclick="openModal('cr1')">
+  <div class="research-card" onclick="openModal('cra')">
     <img src="/images/Figureplot_00.png" alt="RCW 38 multiwavelength image">
     <div class="research-card-label">
       <h3>Cosmic-Ray Acceleration in Young Star-Forming Regions</h3>
@@ -28,7 +28,7 @@ author_profile: true
     </div>
   </div>
 
-  <div class="research-card" onclick="openModal('cr2')">
+  <div class="research-card" onclick="openModal('crb')">
     <img src="/images/ORION.jpg" alt="Orion BN/KL JWST">
     <div class="research-card-label">
       <h3>Cosmic-Ray Acceleration in Explosive Dispersal Outflows</h3>
@@ -51,9 +51,9 @@ author_profile: true
      ============================================================ -->
 
 <!-- Modal 1: Cosmic Rays -->
-<div id="modal-cr1" class="research-modal">
+<div id="modal-cra" class="research-modal">
   <div class="modal-content">
-    <span class="modal-close" onclick="closeModal('cr1')">&times;</span>
+    <span class="modal-close" onclick="closeModal('cra')">&times;</span>
     <h2>Cosmic-Ray Acceleration in Young Star-Forming Regions</h2>
     <p><strong>Keywords:</strong> Fermi-LAT, Stellar Winds, Diffusion Coefficient</p>
     <p>
@@ -87,9 +87,9 @@ author_profile: true
   </div>
 </div>
 
-<div id="modal-cr2" class="research-modal">
+<div id="modal-crb" class="research-modal">
   <div class="modal-content">
-    <span class="modal-close" onclick="closeModal('cr2')">&times;</span>
+    <span class="modal-close" onclick="closeModal('crb')">&times;</span>
     <h2>Cosmic-Ray Acceleration in Explosive Dispersal Outlfows</h2>
     <p><strong>Keywords:</strong> Explosive Molecular Outflows, Protostellar Mergers</p>
      <p>
@@ -134,7 +134,7 @@ author_profile: true
   Another interesting source that I studied is AT2021yky. It is a fast blue optical transient that has characteristics similar to faint and fast TDEs. However, its optical spectra are unusual for TDEs since it has a largely featureless spectra with broad H_alpha lines that turn on post-peak. We compare this source with Luminous fast blue optical transients (LFBOTs) and faint and fast (FaF) TDEs. The cooler blackbody temperature of this transient and the absence of He II and Balmer emission lines other than H_alpha favour its classification as an ANT instead.
 </p>   
     <figure class="paper-fig" style="max-width: 55%; margin: 1.5rem auto;">
-      <img src="/images/L40.pdf" style="width:100%;">
+      <img src="/images/L40.png" style="width:100%;">
       <figcaption>
         Peak luminosity versus decline rate, which is the logarithmic change in bolometric luminosity between peak and 40 days post-peak, for AT2021yly along with a sample of TDEs, ANTs, and other luminous transients.
       </figcaption>
