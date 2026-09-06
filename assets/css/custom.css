@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Astro background + floating profile
+   Drop-in overrides for AcademicPages (Minimal Mistakes)
+   Goal: full-bleed astronomy image behind everything, profile photo and
+   name sitting directly on it, page text on a light readable panel.
+   ========================================================================== */
+
+:root {
+  /* Swap this path for whatever you name your background file. */
+  --astro-bg: url("/images/astro-bg.jpg");
+
+  /* Scrim = the dark wash over the image. Raise the alpha values if your
+     image is bright and the white sidebar text is hard to read. */
+  --scrim-top: rgba(6, 10, 26, 0.50);
+  --scrim-bottom: rgba(6, 10, 26, 0.78);
+
+  --panel: rgba(255, 255, 255, 0.95);
+  --sidebar-text: #eef1fa;
+  --sidebar-link: #b9c8f5;
+}
+
+/* --- 1. The background ---------------------------------------------------- */
+
+html {
+  min-height: 100%;
+  background-image: linear-gradient(var(--scrim-top), var(--scrim-bottom)),
+                    var(--astro-bg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  background: transparent !important;
+}
+
+/* iOS Safari handles background-attachment: fixed badly — let it scroll. */
+@media (max-width: 924px) {
+  html { background-attachment: scroll; }
+}
+
+/* --- 2. Top navigation ---------------------------------------------------- */
+
+.masthead {
+  background: rgba(6, 10, 26, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.greedy-nav { background: transparent; }
+
+.greedy-nav a,
+.greedy-nav .site-title,
+.greedy-nav button {
+  color: var(--sidebar-text);
+}
+
+.greedy-nav a:hover { color: #fff; }
+.greedy-nav .visible-links a::before { background: var(--sidebar-link); }
+
+/* The collapsed "more" menu still needs a solid background. */
+.greedy-nav .hidden-links {
+  background: #10152b;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.greedy-nav .hidden-links a { color: var(--sidebar-text); }
+.greedy-nav .hidden-links::before { border-bottom-color: #10152b; }
+
+/* --- 3. Sidebar: photo and name sit on the image, not on a panel ---------- */
+
+#main { background: transparent; }
+
+.sidebar { opacity: 1 !important; }
+
+.sidebar,
+.sidebar p,
+.sidebar li,
+.sidebar .author__name,
+.sidebar .author__pronouns,
+.sidebar .author__bio {
+  color: var(--sidebar-text);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+}
+
+.author__avatar img {
+  border-radius: 50%;
+  padding: 0;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
+}
+
+@media (min-width: 925px) {
+  .author__avatar img { max-width: 200px; }
+
+  /* Links list is inline on wide screens — strip the dropdown chrome. */
+  .author__urls {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.author__urls a {
+  color: var(--sidebar-link);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+}
+.author__urls a:hover { color: #fff; }
+
+/* On narrow screens the links are a popup, so keep it opaque. */
+@media (max-width: 924px) {
+  .author__urls {
+    background: #10152b;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .author__urls::before { border-bottom-color: #10152b; }
+  .author__urls-wrapper button {
+    color: var(--sidebar-text);
+    background: rgba(255, 255, 255, 0.10);
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+}
+
+/* --- 4. Content panel ----------------------------------------------------- */
+
+.page,
+.archive {
+  background: var(--panel);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.40);
+  padding: 1.75em;
+}
+
+/* AcademicPages reserves right padding for a sidebar it isn't using here.
+   Reclaim it and set the width explicitly so the panel lines up with the
+   sidebar. Nudge the 220px / 320px if your gutter looks off. */
+@media (min-width: 925px) {
+  .page,
+  .archive {
+    width: calc(100% - 220px);
+    padding: 2em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page,
+  .archive {
+    width: calc(100% - 340px);
+    padding: 2.5em;
+  }
+}
+
+/* --- 5. Footer ------------------------------------------------------------ */
+
+.page__footer {
+  background: rgba(6, 10, 26, 0.75);
+  color: var(--sidebar-text);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.page__footer a,
+.page__footer footer,
+.page__footer .page__footer-follow a {
+  color: var(--sidebar-link);
+}
+.page__footer a:hover { color: #fff; }
