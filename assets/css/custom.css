@@ -166,3 +166,32 @@ body {
   color: var(--sidebar-link);
 }
 .page__footer a:hover { color: #fff; }
+
+/* Nav bar: force transparency past the theme stylesheet */
+.masthead,
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .visible-links li,
+.greedy-nav__toggle {
+  background: transparent !important;
+}
+
+.masthead {
+  background: rgba(6, 10, 26, 0.45) !important;
+}
+
+.greedy-nav a,
+.greedy-nav .site-title,
+.masthead__menu-item a {
+  color: #eef1fa !important;
+}
+
+/* Keep the avatar a circle even though profile.png isn't square */
+.author__avatar img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
