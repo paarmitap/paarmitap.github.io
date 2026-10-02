@@ -151,7 +151,7 @@ author_profile: true
      ============================================================ -->
 <style>
 .research-hero {
-  background: url('/images/research_banner.jpg') center center / cover no-repeat;
+  background: url('/images/background_webiste.pdf') center center / cover no-repeat;
   background-color: #1a1a2e;
   padding: 3rem 2rem;
   margin: -1rem -1rem 2.5rem -1rem;
