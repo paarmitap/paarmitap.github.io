@@ -1,8 +1,8 @@
 /* ==========================================================================
    Astro background + floating profile
    Drop-in overrides for AcademicPages (Minimal Mistakes)
-   Goal: full-bleed astronomy image behind everything, profile photo and
-   name sitting directly on it, page text on a light readable panel.
+   Breakpoint note: AcademicPages switches to its wide layout at 925px.
+   Every rule below is scoped to one side of that line or the other.
    ========================================================================== */
 
 :root {
@@ -21,51 +21,70 @@
 
 /* --- 1. The background ---------------------------------------------------- */
 
-html {
-  min-height: 100%;
+/* A fixed pseudo-element rather than background-attachment: fixed — the
+   latter either jitters or over-zooms on iOS Safari. */
+html,
+body {
+  background: transparent !important;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
   background-image: linear-gradient(var(--scrim-top), var(--scrim-bottom)),
                     var(--astro-bg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
-body {
-  background: transparent !important;
-}
-
-/* iOS Safari handles background-attachment: fixed badly — let it scroll. */
-@media (max-width: 924px) {
-  html { background-attachment: scroll; }
+.page__content img,
+.archive img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* --- 2. Top navigation ---------------------------------------------------- */
 
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav,
+.greedy-nav .visible-links,
+.greedy-nav .visible-links li,
+.greedy-nav__toggle {
+  background: transparent !important;
+}
+
 .masthead {
-  background: rgba(6, 10, 26, 0.45);
+  background: rgba(6, 10, 26, 0.45) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
-.greedy-nav { background: transparent; }
-
 .greedy-nav a,
 .greedy-nav .site-title,
-.greedy-nav button {
-  color: var(--sidebar-text);
+.greedy-nav button,
+.masthead__menu-item a {
+  color: var(--sidebar-text) !important;
 }
 
-.greedy-nav a:hover { color: #fff; }
+.greedy-nav a:hover { color: #fff !important; }
 .greedy-nav .visible-links a::before { background: var(--sidebar-link); }
 
-/* The collapsed "more" menu still needs a solid background. */
+/* The collapsed "more" menu still needs something solid behind it. */
 .greedy-nav .hidden-links {
-  background: #10152b;
+  background: #10152b !important;
   border-color: rgba(255, 255, 255, 0.2);
 }
-.greedy-nav .hidden-links a { color: var(--sidebar-text); }
+.greedy-nav .hidden-links a { color: var(--sidebar-text) !important; }
 .greedy-nav .hidden-links::before { border-bottom-color: #10152b; }
 
 /* --- 3. Sidebar: photo and name sit on the image, not on a panel ---------- */
@@ -89,17 +108,9 @@ body {
   padding: 0;
   border: 4px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.55);
-}
-
-@media (min-width: 925px) {
-  .author__avatar img { max-width: 200px; }
-
-  /* Links list is inline on wide screens — strip the dropdown chrome. */
-  .author__urls {
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-  }
+  /* profile.png isn't square — crop to a circle instead of squashing. */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 .author__urls a {
@@ -108,17 +119,76 @@ body {
 }
 .author__urls a:hover { color: #fff; }
 
-/* On narrow screens the links are a popup, so keep it opaque. */
-@media (max-width: 924px) {
-  .author__urls {
-    background: #10152b;
-    border-color: rgba(255, 255, 255, 0.2);
+/* --- 3a. Sidebar, wide screens only --------------------------------------- */
+
+@media (min-width: 925px) {
+  .author__avatar img {
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
   }
-  .author__urls::before { border-bottom-color: #10152b; }
-  .author__urls-wrapper button {
-    color: var(--sidebar-text);
-    background: rgba(255, 255, 255, 0.10);
-    border-color: rgba(255, 255, 255, 0.35);
+
+  /* Links are a plain inline list here — strip the dropdown chrome. */
+  .author__urls {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+/* --- 3b. Sidebar, phones and small tablets -------------------------------- */
+
+@media (max-width: 924px) {
+  /* AcademicPages lays these three out as table cells, which cannot hold a
+     large avatar. Stack and centre them instead. */
+  .author__avatar,
+  .author__content,
+  .author__urls-wrapper {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .author__avatar { margin-bottom: 0.75em; }
+
+  .author__avatar img {
+    width: 130px;
+    height: 130px;
+    max-width: 130px;
+    border-width: 3px;
+  }
+
+  .author__content { margin-bottom: 0.5em; }
+
+  /* Drop the "Follow" dropdown — show the links directly. */
+  .author__urls-wrapper button { display: none; }
+
+  .author__urls {
+    display: block !important;
+    position: static;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .author__urls::before,
+  .author__urls::after { display: none; }
+
+  .author__urls li {
+    display: inline-block;
+    margin: 0 0.5em 0.25em;
+  }
+
+  .sidebar {
+    margin-bottom: 1.5em;
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 }
 
@@ -132,9 +202,18 @@ body {
   padding: 1.75em;
 }
 
+@media (max-width: 924px) {
+  .page,
+  .archive {
+    width: 100%;
+    padding: 1.25em;
+    border-radius: 10px;
+  }
+}
+
 /* AcademicPages reserves right padding for a sidebar it isn't using here.
    Reclaim it and set the width explicitly so the panel lines up with the
-   sidebar. Nudge the 220px / 320px if your gutter looks off. */
+   sidebar. Nudge the 220px / 340px if your gutter looks off. */
 @media (min-width: 925px) {
   .page,
   .archive {
@@ -166,32 +245,3 @@ body {
   color: var(--sidebar-link);
 }
 .page__footer a:hover { color: #fff; }
-
-/* Nav bar: force transparency past the theme stylesheet */
-.masthead,
-.masthead__inner-wrap,
-.masthead__menu,
-.greedy-nav,
-.greedy-nav .visible-links,
-.greedy-nav .visible-links li,
-.greedy-nav__toggle {
-  background: transparent !important;
-}
-
-.masthead {
-  background: rgba(6, 10, 26, 0.45) !important;
-}
-
-.greedy-nav a,
-.greedy-nav .site-title,
-.masthead__menu-item a {
-  color: #eef1fa !important;
-}
-
-/* Keep the avatar a circle even though profile.png isn't square */
-.author__avatar img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  width: 200px;
-  height: 200px;
-}
