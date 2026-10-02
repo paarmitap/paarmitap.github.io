@@ -1,28 +1,34 @@
 /* ==========================================================================
-   Astro background + floating profile
+   Astro background, white text
    Drop-in overrides for AcademicPages (Minimal Mistakes)
-   Breakpoint note: AcademicPages switches to its wide layout at 925px.
-   Every rule below is scoped to one side of that line or the other.
+   AcademicPages switches to its wide layout at 925px. Every layout rule
+   below is scoped to one side of that line.
    ========================================================================== */
 
 :root {
   /* Swap this path for whatever you name your background file. */
   --astro-bg: url("/images/astro-bg.jpg");
 
-  /* Scrim = the dark wash over the image. Raise the alpha values if your
-     image is bright and the white sidebar text is hard to read. */
-  --scrim-top: rgba(6, 10, 26, 0.50);
-  --scrim-bottom: rgba(6, 10, 26, 0.78);
+  /* The wash over the image. Raise these if text is hard to read. */
+  --scrim-top: rgba(6, 10, 26, 0.55);
+  --scrim-bottom: rgba(6, 10, 26, 0.80);
 
-  --panel: rgba(255, 255, 255, 0.95);
-  --sidebar-text: #eef1fa;
-  --sidebar-link: #b9c8f5;
+  /* The content panel. Dark and translucent, so the image reads through it.
+     For NO panel at all, set this to transparent and --panel-blur to 0px. */
+  --panel: rgba(8, 12, 28, 0.55);
+  --panel-blur: 3px;
+
+  --body-text: #e8ecfa;
+  --heading-text: #ffffff;
+  --link: #9fc1ff;
+  --muted: #b6bed6;
+  --hairline: rgba(255, 255, 255, 0.20);
 }
 
 /* --- 1. The background ---------------------------------------------------- */
 
 /* A fixed pseudo-element rather than background-attachment: fixed — the
-   latter either jitters or over-zooms on iOS Safari. */
+   latter jitters or over-zooms on iOS Safari. */
 html,
 body {
   background: transparent !important;
@@ -45,12 +51,6 @@ body::before {
   background-repeat: no-repeat;
 }
 
-.page__content img,
-.archive img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* --- 2. Top navigation ---------------------------------------------------- */
 
 .masthead__inner-wrap,
@@ -64,7 +64,7 @@ body::before {
 
 .masthead {
   background: rgba(6, 10, 26, 0.45) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid var(--hairline);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
@@ -73,21 +73,20 @@ body::before {
 .greedy-nav .site-title,
 .greedy-nav button,
 .masthead__menu-item a {
-  color: var(--sidebar-text) !important;
+  color: var(--body-text) !important;
 }
 
 .greedy-nav a:hover { color: #fff !important; }
-.greedy-nav .visible-links a::before { background: var(--sidebar-link); }
+.greedy-nav .visible-links a::before { background: var(--link); }
 
-/* The collapsed "more" menu still needs something solid behind it. */
 .greedy-nav .hidden-links {
   background: #10152b !important;
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--hairline);
 }
-.greedy-nav .hidden-links a { color: var(--sidebar-text) !important; }
+.greedy-nav .hidden-links a { color: var(--body-text) !important; }
 .greedy-nav .hidden-links::before { border-bottom-color: #10152b; }
 
-/* --- 3. Sidebar: photo and name sit on the image, not on a panel ---------- */
+/* --- 3. Sidebar ----------------------------------------------------------- */
 
 #main { background: transparent; }
 
@@ -99,8 +98,8 @@ body::before {
 .sidebar .author__name,
 .sidebar .author__pronouns,
 .sidebar .author__bio {
-  color: var(--sidebar-text);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+  color: var(--body-text);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 
 .author__avatar img {
@@ -114,12 +113,10 @@ body::before {
 }
 
 .author__urls a {
-  color: var(--sidebar-link);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+  color: var(--link);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 .author__urls a:hover { color: #fff; }
-
-/* --- 3a. Sidebar, wide screens only --------------------------------------- */
 
 @media (min-width: 925px) {
   .author__avatar img {
@@ -128,15 +125,12 @@ body::before {
     max-width: 200px;
   }
 
-  /* Links are a plain inline list here — strip the dropdown chrome. */
   .author__urls {
     background: transparent;
     border: 0;
     box-shadow: none;
   }
 }
-
-/* --- 3b. Sidebar, phones and small tablets -------------------------------- */
 
 @media (max-width: 924px) {
   /* AcademicPages lays these three out as table cells, which cannot hold a
@@ -196,10 +190,15 @@ body::before {
 
 .page,
 .archive {
+  /* flow-root makes the panel contain the theme's floated inner wrappers.
+     Without it the panel collapses to zero height on narrow screens. */
+  display: flow-root;
   background: var(--panel);
-  border-radius: 14px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.40);
+  border-radius: 12px;
   padding: 1.75em;
+  -webkit-backdrop-filter: blur(var(--panel-blur));
+  backdrop-filter: blur(var(--panel-blur));
+  border: 1px solid var(--hairline);
 }
 
 @media (max-width: 924px) {
@@ -212,8 +211,8 @@ body::before {
 }
 
 /* AcademicPages reserves right padding for a sidebar it isn't using here.
-   Reclaim it and set the width explicitly so the panel lines up with the
-   sidebar. Nudge the 220px / 340px if your gutter looks off. */
+   Reclaim it and set the width so the panel lines up with the sidebar.
+   Nudge 220px / 340px if your gutter looks off. */
 @media (min-width: 925px) {
   .page,
   .archive {
@@ -230,11 +229,114 @@ body::before {
   }
 }
 
-/* --- 5. Footer ------------------------------------------------------------ */
+/* --- 5. Text on the panel ------------------------------------------------- */
+
+.page,
+.archive,
+.page__content,
+.page__content p,
+.page__content li,
+.page__content dd,
+.archive__item-excerpt {
+  color: var(--body-text);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+.page__title,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6,
+.archive__item-title,
+.archive__subtitle {
+  color: var(--heading-text);
+  border-bottom-color: var(--hairline);
+}
+
+.page__content a,
+.archive__item-title a,
+.page__related a {
+  color: var(--link);
+}
+.page__content a:hover,
+.archive__item-title a:hover { color: #fff; }
+
+.page__meta,
+.page__date,
+.page__taxonomy,
+.page__taxonomy a,
+.archive__item-meta,
+.page__content small {
+  color: var(--muted);
+}
+
+.page__content hr,
+.page__related,
+.page__share {
+  border-color: var(--hairline);
+}
+
+.page__content blockquote {
+  border-left-color: var(--link);
+  color: var(--muted);
+}
+
+/* Tables */
+.page__content table { color: var(--body-text); }
+.page__content th,
+.page__content td { border-color: var(--hairline); }
+.page__content thead,
+.page__content th { background: rgba(255, 255, 255, 0.08); color: var(--heading-text); }
+.page__content tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.04); }
+
+/* Code */
+.page__content code,
+.page__content pre,
+.page__content .highlight,
+.page__content .highlighter-rouge {
+  background: rgba(0, 0, 0, 0.45) !important;
+  color: #e6e9f5;
+  border-radius: 4px;
+}
+
+/* Callout boxes */
+.notice,
+.notice--primary,
+.notice--info,
+.notice--warning,
+.notice--danger,
+.notice--success {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--body-text) !important;
+  border-color: var(--hairline);
+}
+
+/* --- 6. Figures ----------------------------------------------------------- */
+
+/* Plots exported from matplotlib have white backgrounds. A light frame makes
+   them look intentional instead of like a glaring rectangle. Delete this
+   block if you switch to transparent-background figures. */
+.page__content img,
+.archive img {
+  max-width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Figure captions sit outside the frame, so keep them light. */
+.page__content figcaption,
+.page__content em { color: var(--muted); }
+
+/* --- 7. Footer ------------------------------------------------------------ */
 
 .page__footer {
   background: rgba(6, 10, 26, 0.75);
-  color: var(--sidebar-text);
+  color: var(--body-text);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
@@ -242,6 +344,6 @@ body::before {
 .page__footer a,
 .page__footer footer,
 .page__footer .page__footer-follow a {
-  color: var(--sidebar-link);
+  color: var(--link);
 }
 .page__footer a:hover { color: #fff; }
